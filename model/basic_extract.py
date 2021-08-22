@@ -131,13 +131,19 @@ class BasicExtractModel:
                 buffer.append(get_grade(self.pdf_df, row, col))  # 年級
                 buffer.append(get_term(self.pdf_df, row, col))  # 學期
                 buffer.append(self.pdf_df.iloc[row, col])  # 課程
-                buffer.append(self.pdf_df.iloc[row, col + 1])  # 學分
                 if col + 3 >= col_end:
+                    if self.pdf_df.iloc[row, col + 1] == '':
+                        try:
+                            self.pdf_df.iloc[row, col + 1] = self.pdf_df.iloc[row, col + 2]
+                            self.pdf_df.iloc[row, col + 2] = None
+                        except:
+                            pass
                     if self.pdf_df.iloc[row, col + 2] is None:
                         try:
                             self.pdf_df.iloc[row, col + 2] = self.pdf_df.iloc[row, col + 3]
                         except:
                             pass
+                buffer.append(self.pdf_df.iloc[row, col + 1])  # 學分
                 buffer.append(self.pdf_df.iloc[row, col + 2])  # 時數
 
                 course_info.append(buffer)
