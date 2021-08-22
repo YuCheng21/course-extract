@@ -1,7 +1,7 @@
 import pdfplumber
 import os
-from basic_extract import BasicExtractModel
-from two_year_extract import TwoYearModel
+from model.basic_extract import BasicExtractModel
+from model.two_year_extract import TwoYearModel
 
 
 """
