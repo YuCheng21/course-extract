@@ -8,6 +8,12 @@
 
 ## Usage
 
+建立 python 虛擬環境，並安裝依賴套件。
+
+```
+pip install -r requirements.txt
+```
+
 執行 `main.py` 來輸出提取課程結構規劃表。
 
 - main.py
