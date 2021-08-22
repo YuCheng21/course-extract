@@ -17,7 +17,7 @@ Testing:
   - None
 """
 
-FILE_NAME = '四技'
+FILE_NAME = '二技'
 
 PROJECT_PATH = os.path.abspath('./')
 DIR_NAME = 'input(pdf)'
