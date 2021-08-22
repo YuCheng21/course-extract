@@ -17,9 +17,10 @@ Testing:
   - None
 """
 
+FILE_NAME = '四技'
+
 PROJECT_PATH = os.path.abspath('./')
 DIR_NAME = 'input(pdf)'
-FILE_NAME = '四技'
 FILE_EXT = '.pdf'
 PDF_PATH = os.path.join(PROJECT_PATH, DIR_NAME, FILE_NAME + FILE_EXT)
 
