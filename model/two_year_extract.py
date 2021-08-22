@@ -12,12 +12,13 @@ class TwoYearModel:
         self.pdf = pdf
         self.pdf_cleaned = None
         self.pdf_df = None
+        self.WRONG_FILE = 'file is wrong'
 
     def check_file(self):
         text = self.pdf.pages[0].extract_text()
         check_word = re.search(r'二技課程表', text)
         if check_word is None:
-            raise Exception('file is wrong')
+            raise Exception(self.WRONG_FILE)
 
     def pdf_clean(self):
         def remove_blank(text):
